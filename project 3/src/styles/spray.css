@@ -1,0 +1,133 @@
+/* Spray Paint Graphics - Navy Transparent-Center Effects */
+
+/* Base spray background utility */
+.spray-bg {
+  position: relative;
+  z-index: 1;
+}
+
+.spray-bg::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Horizontal spray for hero sections */
+.spray-horizontal::before {
+  width: 120%;
+  height: 60%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 800 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='roughen'%3E%3CfeTurbulence baseFrequency='0.04' numOctaves='3' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='8'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M50 100 Q200 60 400 100 T750 100 Q780 120 750 140 Q600 160 400 140 Q200 120 50 120 Z' fill='none' stroke='%231E2B38' stroke-width='40' opacity='0.6' filter='url(%23roughen)'/%3E%3Cpath d='M80 100 Q220 70 400 100 T720 100 Q750 115 720 125 Q580 145 400 125 Q220 105 80 105 Z' fill='none' stroke='%231E2B38' stroke-width='25' opacity='0.4' filter='url(%23roughen)'/%3E%3Cpath d='M100 100 Q240 80 400 100 T700 100 Q720 110 700 115 Q560 130 400 115 Q240 100 100 100 Z' fill='none' stroke='%231E2B38' stroke-width='15' opacity='0.3' filter='url(%23roughen)'/%3E%3C/svg%3E");
+}
+
+/* Compact oval for buttons and badges */
+.spray-oval::before {
+  width: 150%;
+  height: 150%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='roughen2'%3E%3CfeTurbulence baseFrequency='0.06' numOctaves='4' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='6'/%3E%3C/filter%3E%3C/defs%3E%3Cellipse cx='150' cy='150' rx='120' ry='80' fill='none' stroke='%231E2B38' stroke-width='30' opacity='0.5' filter='url(%23roughen2)'/%3E%3Cellipse cx='150' cy='150' rx='100' ry='65' fill='none' stroke='%231E2B38' stroke-width='20' opacity='0.4' filter='url(%23roughen2)'/%3E%3Cellipse cx='150' cy='150' rx='80' ry='50' fill='none' stroke='%231E2B38' stroke-width='12' opacity='0.3' filter='url(%23roughen2)'/%3E%3C/svg%3E");
+}
+
+/* Corner swoosh for image overlays */
+.spray-corner::before {
+  width: 80%;
+  height: 80%;
+  top: 20%;
+  left: 20%;
+  transform: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='roughen3'%3E%3CfeTurbulence baseFrequency='0.05' numOctaves='3' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='10'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M50 350 Q100 300 150 320 Q200 340 250 300 Q300 260 350 280 Q380 300 360 330 Q320 370 280 350 Q240 330 200 360 Q160 390 120 370 Q80 350 50 350 Z' fill='none' stroke='%231E2B38' stroke-width='25' opacity='0.5' filter='url(%23roughen3)'/%3E%3Cpath d='M70 330 Q110 290 140 310 Q170 330 200 300 Q230 270 260 285 Q290 300 275 320 Q245 350 215 335 Q185 320 155 345 Q125 370 95 355 Q75 340 70 330 Z' fill='none' stroke='%231E2B38' stroke-width='15' opacity='0.4' filter='url(%23roughen3)'/%3E%3C/svg%3E");
+}
+
+/* Rotational variants for variety */
+.spray-rotate-1::before {
+  transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.spray-rotate-2::before {
+  transform: translate(-50%, -50%) rotate(3deg);
+}
+
+.spray-rotate-3::before {
+  transform: translate(-50%, -50%) rotate(-1deg);
+}
+
+/* Lighter blend mode for cream backgrounds */
+.spray-light::before {
+  mix-blend-mode: multiply;
+  opacity: 0.25;
+}
+
+/* Darker blend mode for darker sections */
+.spray-dark::before {
+  mix-blend-mode: overlay;
+  opacity: 0.45;
+}
+
+/* Specific section implementations */
+.hero-spray {
+  position: relative;
+}
+
+.hero-spray::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  height: 60%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='heroRoughen'%3E%3CfeTurbulence baseFrequency='0.03' numOctaves='4' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='12'/%3E%3C/filter%3E%3C/defs%3E%3Cpath d='M100 150 Q300 100 500 150 Q700 200 900 150 Q950 170 900 190 Q700 240 500 190 Q300 140 100 190 Q50 170 100 150 Z' fill='none' stroke='%231E2B38' stroke-width='50' opacity='0.4' filter='url(%23heroRoughen)'/%3E%3Cpath d='M150 150 Q350 120 500 150 Q650 180 850 150 Q880 165 850 175 Q650 200 500 175 Q350 150 150 175 Q120 165 150 150 Z' fill='none' stroke='%231E2B38' stroke-width='30' opacity='0.3' filter='url(%23heroRoughen)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.cta-spray {
+  position: relative;
+}
+
+.cta-spray::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-1deg);
+  width: 140%;
+  height: 140%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cfilter id='ctaRoughen'%3E%3CfeTurbulence baseFrequency='0.08' numOctaves='3' result='noise'/%3E%3CfeDisplacementMap in='SourceGraphic' in2='noise' scale='4'/%3E%3C/filter%3E%3C/defs%3E%3Cellipse cx='100' cy='50' rx='80' ry='35' fill='none' stroke='%231E2B38' stroke-width='20' opacity='0.4' filter='url(%23ctaRoughen)'/%3E%3Cellipse cx='100' cy='50' rx='65' ry='28' fill='none' stroke='%231E2B38' stroke-width='12' opacity='0.3' filter='url(%23ctaRoughen)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Performance optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .spray-bg::before,
+  .hero-spray::before,
+  .cta-spray::before {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* High contrast mode adjustments */
+@media (prefers-contrast: high) {
+  .spray-bg::before,
+  .hero-spray::before,
+  .cta-spray::before {
+    opacity: 0.2;
+  }
+}

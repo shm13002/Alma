@@ -1,0 +1,49 @@
+<svg viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#F5E2B8"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="100" cy="100" r="50" fill="#D7A437" opacity="0.3"/>
+  <circle cx="1100" cy="530" r="80" fill="#2C5282" opacity="0.2"/>
+  
+  <!-- Main ALMA logo -->
+  <text
+    x="600"
+    y="280"
+    text-anchor="middle"
+    fill="#1C2D4A"
+    font-family="Recoleta, serif"
+    font-weight="900"
+    font-size="120"
+    letter-spacing="-0.05em"
+  >
+    alma
+  </text>
+  
+  <!-- Tagline -->
+  <text
+    x="600"
+    y="350"
+    text-anchor="middle"
+    fill="#1C2D4A"
+    font-family="Poppins, sans-serif"
+    font-weight="600"
+    font-size="32"
+    opacity="0.8"
+  >
+    Daily Gut Health Gummies
+  </text>
+  
+  <!-- Subtitle -->
+  <text
+    x="600"
+    y="400"
+    text-anchor="middle"
+    fill="#2C5282"
+    font-family="Poppins, sans-serif"
+    font-weight="400"
+    font-size="24"
+  >
+    Support Your Digestive Wellness Naturally
+  </text>
+</svg>
